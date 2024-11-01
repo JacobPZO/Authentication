@@ -12,17 +12,19 @@ public class PlayerInfo : MonoBehaviour
     public static PlayerInfo instance;
     void Awake () { instance = this; }
 
-    GetPlayerProfileRequest getProfileRequest = new GetPlayerProfileRequest
-    {
-        PlayFabId = LoginRegister.instance.playFabId,
-        ProfileConstraints = new PlayerProfileViewConstraints
-        {
-            ShowDisplayName = true
-        }
-    };
+
 
     public void OnLoggedIn ()
     {
+        GetPlayerProfileRequest getProfileRequest = new GetPlayerProfileRequest
+        {
+            PlayFabId = LoginRegister.instance.playFabId,
+            ProfileConstraints = new PlayerProfileViewConstraints
+            {
+                ShowDisplayName = true
+            }
+        };
+
         // once again not sure where to put this
         PlayFabClientAPI.GetPlayerProfile(getProfileRequest,
             result =>

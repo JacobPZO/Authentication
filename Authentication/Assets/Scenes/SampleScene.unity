@@ -441,6 +441,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4654e38c793792d409e2f5b64f0dfd11, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  usernameInput: {fileID: 2099840412}
+  passwordInput: {fileID: 1560143503}
+  displayText: {fileID: 692577071}
+  onLoggedIn:
+    m_PersistentCalls:
+      m_Calls: []
+  playFabId: 
 --- !u!4 &437483678
 Transform:
   m_ObjectHideFlags: 0
